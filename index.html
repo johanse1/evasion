@@ -29,6 +29,7 @@ h1{margin:0 0 8px;font-size:34px}
 .lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
 #go{background:var(--btn);color:var(--btnink);border:0;border-radius:12px;padding:14px 28px;font:inherit;font-size:18px;font-weight:700;width:100%}
 </style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b1020"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <canvas id="c"></canvas>
@@ -152,5 +153,6 @@ reset();show('Evasión','Arrastra el dedo para volar. Los misiles te persiguen s
 requestAnimationFrame(frame);
 })();
 </script>
+<script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
 </body>
 </html>
